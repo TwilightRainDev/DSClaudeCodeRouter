@@ -1,0 +1,25 @@
+NOTICE
+
+This project is a port of the DeepSeek Harness routing ecosystem to Claude Code.
+The judgment logic and guidance texts in hook/ are line-for-line derived from:
+
+- dsh-mode-boost/lib/core.js (MIT, yjh051108): classifyTask / isChatTask /
+  isComplexTask / guideFor, the GUIDE_* texts and the WEAK_PRO / WEAK_FLASH
+  personas. Copyright (c) 2026 yjh051108. MIT license terms apply.
+- dsh-router-standard router-core.mjs (MIT, yjh051108): mode bands, personas,
+  keyword regexes and near-field guidance mechanism.
+- dsh-super-injector README (MIT, yjh051108): the 10 injection rules, of which
+  rules 4/6/7/8/9/10 (prompt-engineering principles) informed this port's
+  design and docs/.
+
+Mechanisms and measurement evidence referenced in docs/ come from:
+
+- xiaobright/dsh-anchored-standard (MIT): first-turn anchoring mechanism
+  (Project2 measured 98/99).
+- xiaobright/modeltest (MIT): V4.1b evaluation numbers (minimal 99/96,
+  standard 91, anchored-standard 98/99).
+- DeepSeek Harness: host ecosystem of the original presets.
+
+The `hookSpecificOutput` output shape in hook.js follows the Claude Code 2.1.x
+UserPromptSubmit hook schema (Anthropic, proprietary; documented at
+https://docs.claude.com/en/docs/claude-code/hooks).
