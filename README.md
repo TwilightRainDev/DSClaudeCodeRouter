@@ -1,6 +1,6 @@
 # DSClaudeCodeRouter
 
-把 DeepSeek Harness 的**任务感知思维模式路由**（dsh-routing-suite，MIT）移植到 Claude Code 的零依赖实现：UserPromptSubmit hook 在每条真实任务消息后注入近距离引导，按任务类型（build/fix）与复杂度分派 react/spec 行为带，专为 Flash 系模型调校。
+把 DeepSeek Harness 的**任务感知思维模式路由**（[dsh-routing-suite](https://github.com/yjh051108/dsh-routing-suite)，MIT）移植到 Claude Code 的零依赖实现：UserPromptSubmit hook 在每条真实任务消息后注入近距离引导，按任务类型（build/fix）与复杂度分派 react/spec 行为带，专为 Flash 系模型调校。
 
 判定逻辑与引导文本与 dsh-router-standard / dsh-mode-boost 源码逐行一致（改动文本即放弃 DSH 环境 P1-P30 实测背书）。本机/远端模型为 DeepSeek V4 Flash（`deepseek-v4-flash`）时，Flash 档实测结论（路由 96%、单任务完成率 100%、缓存 92-94% 命中）直接适用。
 
